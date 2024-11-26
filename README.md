@@ -30,8 +30,8 @@ npm install @jensonhui/signature-h5
 ### Events
 |     参数     | 说明 |      返回值       |
 | :----------: | :--: | :---------------: |
-| cancelEvent  | 取消 | SignaturePad 实例 |
-| confirmEvent | 确认 |      dataURL      |
+| cancel-event  | 取消 | SignaturePad 实例 |
+| confirm-event | 确认 |      dataURL      |
 
 
 ### Slots

@@ -62,7 +62,7 @@ export default {
       const hasNode = this.canvasNode
       if (hasNode) {
         hasNode.clear()
-        this.$emit('cancelEvent', hasNode)
+        this.$emit('cancel-event', hasNode)
       }
     },
 
@@ -76,7 +76,7 @@ export default {
       // 是否签字
       if (canvasNode.isEmpty()) {
         console.warn('您还没有签名');
-        this.$emit('confirmEvent', canvasNode);
+        this.$emit('confirm-event', canvasNode);
         return false
       }
 
@@ -86,10 +86,10 @@ export default {
       const _signImg = canvasNode.toDataURL('image/png', 0.6) || null
       if (_boxWidth < _boxHeight) {
         rotateBase64Img(_signImg, -90, (imgUrlRes) => {
-          this.$emit('confirmEvent', imgUrlRes);
+          this.$emit('confirm-event', imgUrlRes);
         })
       } else {
-        this.$emit('confirmEvent', _signImg);
+        this.$emit('confirm-event', _signImg);
       }
     }
   },
